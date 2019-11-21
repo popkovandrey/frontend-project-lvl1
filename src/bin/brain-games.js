@@ -7,4 +7,3 @@ console.log();
 const actual = readlineSync.question('May I have you name? ');
 
 console.log(`Hello, ${actual}`);
-

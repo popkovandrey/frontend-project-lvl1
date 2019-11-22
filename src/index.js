@@ -30,7 +30,7 @@ const welcom = (numberGame) => {
 const gameOddEven = (userName) => {
   let num = 0;
   let userAnswer = '';
-  let answer = '';
+  let correctAnswer = '';
 
   console.log();
 
@@ -41,12 +41,12 @@ const gameOddEven = (userName) => {
 
     userAnswer = readlineSync.question('Your answer: ');
 
-    answer = (num % 2) === 0 ? 'yes' : 'no';
+    correctAnswer = (num % 2) === 0 ? 'yes' : 'no';
 
-    if (answer === userAnswer) {
+    if (correctAnswer === userAnswer) {
       console.log('Correct!');
     } else {
-      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${answer}'.`);
+      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
 
       console.log(`Let's try again, ${userName}!`);
 

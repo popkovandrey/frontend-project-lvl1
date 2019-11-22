@@ -1,5 +1,9 @@
 import readlineSync from 'readline-sync';
 
+/* User welcome function. The game number is given at the entrance.
+Depending on this number, in the greeting the starting line with a condition of game is issued.
+A username is requested. Username is returned as a function result.
+*/
 const welcom = (numberGame) => {
   console.log();
 

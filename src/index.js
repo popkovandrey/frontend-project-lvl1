@@ -26,7 +26,8 @@ const welcom = (numberGame) => {
   return userName;
 };
 
-const gameEvenNumber = (userName) => {
+// The game is odd/even. The player's name is entered. Three attempts to answer yes/no.
+const gameOddEven = (userName) => {
   let num = 0;
   let userAnswer = '';
   let answer = '';
@@ -55,4 +56,4 @@ const gameEvenNumber = (userName) => {
   console.log(`Congratulations, ${userName}!`);
 };
 
-export { welcom, gameEvenNumber };
+export { welcom, gameOddEven };

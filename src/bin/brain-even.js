@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import { welcom, gameEvenNumber } from '..';
+import { welcom, gameOddEven } from '..';
 
-gameEvenNumber(welcom(1));
+gameOddEven(welcom(1));

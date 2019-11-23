@@ -19,3 +19,7 @@
 ## Игра "Арифметическая прогрессия" - установка и запуск
 
 [![asciicast](https://asciinema.org/a/283155.svg)](https://asciinema.org/a/283155)
+
+## Игра "Простое ли число?" - установка и запуск
+
+[![asciicast](https://asciinema.org/a/283169.svg)](https://asciinema.org/a/283169)

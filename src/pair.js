@@ -13,6 +13,8 @@ const car = (pair) => pair('first');
 
 const cdr = (pair) => pair('second');
 
-const pairToString = (pair) => `car = ${car(pair)}, cdr = ${cdr(pair)}`
+const pairToString = (pair) => `car = ${car(pair)}, cdr = ${cdr(pair)}`;
 
-export { cons, car, cdr, pairToString };
+export {
+  cons, car, cdr, pairToString,
+};

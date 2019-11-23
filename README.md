@@ -11,3 +11,7 @@
 ## Игра "Калькулятор" - установка и запуск
 
 [![asciicast](https://asciinema.org/a/283123.svg)](https://asciinema.org/a/283123)
+
+## Игра "НОД" - установка и запуск
+
+[![asciicast](https://asciinema.org/a/283130.svg)](https://asciinema.org/a/283130)

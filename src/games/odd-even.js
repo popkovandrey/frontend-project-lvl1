@@ -1,7 +1,8 @@
 import * as pair from '../pair';
+import { rndInRange } from '..';
 
 export default () => {
-  const num = Math.floor(Math.random() * 100);
+  const num = rndInRange(1, 100);
 
   const strAnswer = (num % 2) === 0 ? 'yes' : 'no';
 

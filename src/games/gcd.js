@@ -1,9 +1,10 @@
 import * as pair from '../pair';
+import { rndInRange } from '..';
 
 export default () => {
-  const num1 = Math.floor(Math.random() * 100 + 1);
+  const num1 = rndInRange(1, 100);
 
-  const num2 = Math.floor(Math.random() * 100 + 1);
+  const num2 = rndInRange(1, 100);
 
   let strAnswer = '';
 

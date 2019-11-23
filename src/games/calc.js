@@ -1,15 +1,16 @@
 import * as pair from '../pair';
+import { rndInRange } from '..';
 
 export default () => {
   // random number generation from 1 to 3 for operand selection
   // (1-add, 2-sub, 3-multi)
-  const operand = Math.floor(Math.random() * 3 + 1);
+  const operand = rndInRange(1, 3);
 
   const multiRnd = operand === 3 ? 10 : 100;
 
-  const num1 = Math.floor(Math.random() * multiRnd);
+  const num1 = rndInRange(1, multiRnd);
 
-  const num2 = Math.floor(Math.random() * multiRnd);
+  const num2 = rndInRange(1, multiRnd);
 
   let strAnswer = '';
 

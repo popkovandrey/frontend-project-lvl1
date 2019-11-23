@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync';
-import welcom from './welcom';
+import { welcom } from '.';
 import { car, cdr } from './pair';
 
 export default (funcGame, conditionOfGame) => {

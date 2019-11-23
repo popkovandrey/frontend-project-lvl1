@@ -15,3 +15,7 @@
 ## Игра "НОД" - установка и запуск
 
 [![asciicast](https://asciinema.org/a/283130.svg)](https://asciinema.org/a/283130)
+
+## Игра "Арифметическая прогрессия" - установка и запуск
+
+[![asciicast](https://asciinema.org/a/283155.svg)](https://asciinema.org/a/283155)

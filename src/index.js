@@ -4,18 +4,12 @@ import readlineSync from 'readline-sync';
 Depending on this number, in the greeting the starting line with a condition of game is issued.
 A username is requested. Username is returned as a function result.
 */
-const welcom = (numberGame) => {
+const welcom = (conditionOfGame) => {
   console.log();
 
   console.log('Welcome to the Brain Games!');
 
-  switch (numberGame) {
-    case 1:
-      console.log('Answer "yes" if the number is even, otherwise answer "no".');
-      break;
-    default:
-      break;
-  }
+  if (conditionOfGame !== '') { console.log(conditionOfGame); }
 
   console.log();
 

@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
-import { welcom, gameOddEven } from '..';
+import gameEngine from '../engine';
+import game from '../games/odd-even';
 
-gameOddEven(welcom(1));
+gameEngine(() => game, 'Answer "yes" if the number is even, otherwise answer "no".');

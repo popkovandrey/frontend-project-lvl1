@@ -7,3 +7,7 @@
 ## Игра "Четное/нечетное" - установка и запуск
 
 [![asciicast](https://asciinema.org/a/282944.svg)](https://asciinema.org/a/282944)
+
+## Игра "Калькулятор" - установка и запуск
+
+[![asciicast](https://asciinema.org/a/283123.svg)](https://asciinema.org/a/283123)

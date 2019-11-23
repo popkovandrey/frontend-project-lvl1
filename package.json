@@ -1,7 +1,7 @@
 {
   "name": "frontend-project-lvl1-paa",
   "version": "1.0.0",
-  "description": "first project on Hexlet",
+  "description": "my first project on Hexlet",
   "main": "index.js",
   "bin": {
     "brain-games": "dist/bin/brain-games.js",
@@ -25,6 +25,10 @@
   },
   "author": "I am ;)",
   "license": "ISC",
+  "keywords": [
+    "Hexlet",
+    "frontend-project-lvl1"
+  ],
   "bugs": {
     "url": "https://github.com/popkovandrey/frontend-project-lvl1/issues"
   },

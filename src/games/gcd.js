@@ -1,6 +1,8 @@
 import * as pair from '../pair';
 import { rndInRange } from '..';
 
+// игра "Нахождение Общего Делителя"
+// используется алгоритм Евклида
 export default () => {
   const num1 = rndInRange(1, 100);
 

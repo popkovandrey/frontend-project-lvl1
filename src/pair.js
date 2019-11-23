@@ -1,3 +1,5 @@
+// пары - этим все сказано :)
+
 const cons = (a, b) => (message) => {
   switch (message) {
     case 'first':

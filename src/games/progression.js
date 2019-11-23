@@ -1,6 +1,7 @@
 import * as pair from '../pair';
 import { rndInRange } from '..';
 
+// игра "Арифметическая прогрессия".
 export default () => {
   const start = rndInRange(1, 100);
 

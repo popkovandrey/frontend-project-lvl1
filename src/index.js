@@ -1,9 +1,7 @@
 import readlineSync from 'readline-sync';
 
-/* The output welcome in the games.
-The input string with the condition of the game.
-Returns the user name.
-*/
+// функция приветствия. На вход подается строка с условием для конкретной игры.
+// на выходе запрошенное имя пользователя
 const welcom = (conditionOfGame) => {
   console.log();
 
@@ -20,7 +18,7 @@ const welcom = (conditionOfGame) => {
   return userName;
 };
 
-// random integer generation in the range from min to max
+// функция возвращающая случайное целое число в дапазоне от мин до макс
 const rndInRange = (min, max) => Math.floor(Math.random() * (max - min + 1) + min);
 
 export { welcom, rndInRange };

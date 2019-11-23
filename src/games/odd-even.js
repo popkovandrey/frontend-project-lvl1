@@ -1,6 +1,7 @@
 import * as pair from '../pair';
 import { rndInRange } from '..';
 
+// игра "Четный/нечетный".
 export default () => {
   const num = rndInRange(1, 100);
 

@@ -1,9 +1,10 @@
 import * as pair from '../pair';
 import { rndInRange } from '..';
 
+// игра "Калькулятор".
 export default () => {
-  // random number generation from 1 to 3 for operand selection
-  // (1-add, 2-sub, 3-multi)
+  // случайное число от 1 до 3 для выбора операнда
+  // (1-сложение, 2-вычитание, 3-умножение)
   const operand = rndInRange(1, 3);
 
   const multiRnd = operand === 3 ? 10 : 100;

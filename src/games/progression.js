@@ -1,19 +1,23 @@
-import * as pair from '../pair';
+import { cons } from '@hexlet/pairs';
 import { rndInRange } from '..';
+import gameEngine from '../engine';
 
 // игра "Арифметическая прогрессия".
-export default () => {
+const logicGame = () => {
+  // длина прогрессии
+  const lengthProgress = 10;
+
   const start = rndInRange(1, 100);
 
-  const inc = rndInRange(2, 10);
+  const inc = rndInRange(2, lengthProgress);
 
-  const hide = rndInRange(1, 10);
+  const hide = rndInRange(1, lengthProgress);
 
   let strQuestion = '';
 
   let strAnswer = '';
 
-  for (let i = 0; i < 10; i += 1) {
+  for (let i = 0; i < lengthProgress; i += 1) {
     if (hide === i + 1) {
       strQuestion += ' ..';
       strAnswer = String(start + inc * i);
@@ -22,5 +26,10 @@ export default () => {
     }
   }
 
-  return pair.cons(strQuestion, strAnswer);
+  return cons(strQuestion, strAnswer);
 };
+
+export default () => gameEngine(
+  () => logicGame,
+  'Answer "yes" if the number is even, otherwise answer "no".',
+);

@@ -21,4 +21,7 @@ const welcom = (conditionOfGame) => {
 // функция возвращающая случайное целое число в дапазоне от мин до макс
 const rndInRange = (min, max) => Math.floor(Math.random() * (max - min + 1) + min);
 
-export { welcom, rndInRange };
+// функция проверки на четность (true-четное, false-нечетное)
+const isEven = (number) => (number % 2) === 0;
+
+export { welcom, rndInRange, isEven };

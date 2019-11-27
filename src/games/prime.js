@@ -1,8 +1,9 @@
-import * as pair from '../pair';
+import { cons } from '@hexlet/pairs';
 import { rndInRange } from '..';
+import gameEngine from '../engine';
 
 // игра "Простое ли число?".
-export default () => {
+const logicGame = () => {
   const num = rndInRange(2, 200);
 
   const isPrime = (a) => {
@@ -15,5 +16,10 @@ export default () => {
     return true;
   };
 
-  return pair.cons(String(num), isPrime(num) ? 'yes' : 'no');
+  return cons(String(num), isPrime(num) ? 'yes' : 'no');
 };
+
+export default () => gameEngine(
+  () => logicGame,
+  'Answer "yes" if given number is prime. Otherwise answer "no".',
+);

@@ -1,6 +1,6 @@
+import { car, cdr } from '@hexlet/pairs';
 import readlineSync from 'readline-sync';
 import { welcom } from '.';
-import { car, cdr } from './pair';
 
 // движок - обертка для игр. Игра - функция, возвращающая пару строк.
 // 1 - строка вопроса, 2 - строка ответа

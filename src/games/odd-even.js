@@ -1,11 +1,17 @@
-import * as pair from '../pair';
-import { rndInRange } from '..';
+import { cons } from '@hexlet/pairs';
+import { rndInRange, isEven } from '..';
+import gameEngine from '../engine';
 
 // игра "Четный/нечетный".
-export default () => {
-  const num = rndInRange(1, 100);
+const logicGame = () => {
+  const question = rndInRange(1, 100);
 
-  const strAnswer = (num % 2) === 0 ? 'yes' : 'no';
+  const strAnswer = isEven(question) ? 'yes' : 'no';
 
-  return pair.cons(String(num), strAnswer);
+  return cons(String(question), strAnswer);
 };
+
+export default () => gameEngine(
+  () => logicGame,
+  'Answer "yes" if the number is even, otherwise answer "no".',
+);

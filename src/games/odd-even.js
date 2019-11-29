@@ -1,5 +1,5 @@
 import { cons } from '@hexlet/pairs';
-import { rndInRange } from '..';
+import rndInRange from '..';
 import gameEngine from '../engine';
 
 // функция проверки на четность (true-четное, false-нечетное)

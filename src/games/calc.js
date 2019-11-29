@@ -1,5 +1,5 @@
 import { cons } from '@hexlet/pairs';
-import { rndInRange } from '..';
+import rndInRange from '..';
 import gameEngine from '../engine';
 
 // список доступных операций с числами

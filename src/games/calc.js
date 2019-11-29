@@ -2,45 +2,45 @@ import { cons } from '@hexlet/pairs';
 import { rndInRange } from '..';
 import gameEngine from '../engine';
 
-// игра "Калькулятор".
-const logicGame = () => {
-  // список доступных операций с числами
-  const listOperations = '+-*';
+// список доступных операций с числами
+const listOperations = '+-*';
 
-  // случайное число от 1 до длины списка с доступными операциями для выбора текущей операции
+// игра "Калькулятор".
+const generateAnswerQuestion = () => {
+  // выбор текущей операции
+  // случайное число от 1 до длины списка с доступными операциями
   // (1-сложение, 2-вычитание, 3-умножение)
   const operation = rndInRange(1, String(listOperations).length);
 
+  const signOperation = listOperations[operation - 1];
+
   // если выпало умножение - случайные числа для вычисления выбираем до 10 (легче считать в уме :))
-  const multiRnd = listOperations[operation - 1] === '*' ? 10 : 100;
+  const multiRnd = signOperation === '*' ? 10 : 100;
 
   const num1 = rndInRange(1, multiRnd);
 
   const num2 = rndInRange(1, multiRnd);
 
-  let strAnswer = '';
+  let answer = '';
 
-  let strQuestion = '';
+  const question = `${num1} ${signOperation} ${num2}`;
 
-  strQuestion = `${num1} ${listOperations[operation - 1]} ${num2}`;
-
-  switch (listOperations[operation - 1]) {
+  switch (signOperation) {
     case '+':
-      strAnswer = String(num1 + num2);
+      answer = String(num1 + num2);
       break;
     case '-':
-      strAnswer = String(num1 - num2);
+      answer = String(num1 - num2);
       break;
     case '*':
-      strAnswer = String(num1 * num2);
+      answer = String(num1 * num2);
       break;
     default:
   }
 
-  return cons(strQuestion, strAnswer);
+  return cons(question, answer);
 };
 
-export default () => gameEngine(
-  () => logicGame,
-  'What is the result of the expression?',
-);
+const conditionGame = 'What is the result of the expression?';
+
+export default () => gameEngine(generateAnswerQuestion, conditionGame);

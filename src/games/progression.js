@@ -3,33 +3,32 @@ import { rndInRange } from '..';
 import gameEngine from '../engine';
 
 // игра "Арифметическая прогрессия".
-const logicGame = () => {
-  // длина прогрессии
-  const lengthProgress = 10;
+const generateAnswerQuestion = () => {
+  // длина
+  const lengthProgression = 10;
+  // первый элемент
+  const startProgression = rndInRange(1, 100);
+  // шаг
+  const stepProgression = rndInRange(2, lengthProgression);
+  // номер скрываемого элемента
+  const hideMemberProgression = rndInRange(1, lengthProgression);
 
-  const start = rndInRange(1, 100);
+  let question = '';
 
-  const inc = rndInRange(2, lengthProgress);
+  let answer = '';
 
-  const hide = rndInRange(1, lengthProgress);
-
-  let strQuestion = '';
-
-  let strAnswer = '';
-
-  for (let i = 0; i < lengthProgress; i += 1) {
-    if (hide === i + 1) {
-      strQuestion += ' ..';
-      strAnswer = String(start + inc * i);
+  for (let i = 0; i < lengthProgression; i += 1) {
+    if (hideMemberProgression === i + 1) {
+      question = `${question} ..`;
+      answer = String(startProgression + stepProgression * i);
     } else {
-      strQuestion += ` ${start + inc * i}`;
+      question = `${question} ${startProgression + stepProgression * i}`;
     }
   }
 
-  return cons(strQuestion, strAnswer);
+  return cons(question, answer);
 };
 
-export default () => gameEngine(
-  () => logicGame,
-  'Answer "yes" if the number is even, otherwise answer "no".',
-);
+const conditionGame = 'Answer "yes" if the number is even, otherwise answer "no".';
+
+export default () => gameEngine(generateAnswerQuestion, conditionGame);

@@ -2,34 +2,32 @@ import { cons } from '@hexlet/pairs';
 import { rndInRange } from '..';
 import gameEngine from '../engine';
 
+// вычисление НОД
 // реализация алгоритма Евклида
-const algEuclid = (a, b) => {
+const calcGCD = (num1, num2) => {
+  const a = num1 > num2 ? num1 : num2;
+  const b = num1 > num2 ? num2 : num1;
+
   if (a % b === 0) {
     return b;
   }
 
-  return algEuclid(b, a % b);
+  return calcGCD(b, a % b);
 };
 
 // игра "Нахождение Общего Делителя"
-// используется алгоритм Евклида
-const logicGame = () => {
+const generateAnswerQuestion = () => {
   const num1 = rndInRange(1, 100);
 
   const num2 = rndInRange(1, 100);
 
-  let strAnswer = '';
+  const answer = String(calcGCD(num1, num2));
 
-  if (num1 >= num2) {
-    strAnswer = String(algEuclid(num1, num2));
-  } else {
-    strAnswer = String(algEuclid(num2, num1));
-  }
+  const question = `${num1} ${num2}`;
 
-  return cons(`${num1} ${num2}`, strAnswer);
+  return cons(question, answer);
 };
 
-export default () => gameEngine(
-  () => logicGame,
-  'Find the greatest common divisor of given numbers.',
-);
+const conditionGame = 'Find the greatest common divisor of given numbers.';
+
+export default () => gameEngine(generateAnswerQuestion, conditionGame);

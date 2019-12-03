@@ -1,25 +1,19 @@
 import { cons } from '@hexlet/pairs';
-import rndInRange from '..';
+import getRandomInRange from '..';
 import gameEngine from '../engine';
 
-// список доступных операций с числами
 const listOperations = '+-*';
 
 // игра "Калькулятор".
 const generateAnswerQuestion = () => {
-  // выбор текущей операции
-  // случайное число от 1 до длины списка с доступными операциями
-  // (1-сложение, 2-вычитание, 3-умножение)
-  const operation = rndInRange(1, String(listOperations).length);
-
-  const signOperation = listOperations[operation - 1];
+  const signOperation = listOperations[getRandomInRange(1, listOperations.length) - 1];
 
   // если выпало умножение - случайные числа для вычисления выбираем до 10 (легче считать в уме :))
-  const multiRnd = signOperation === '*' ? 10 : 100;
+  const max = signOperation === '*' ? 10 : 100;
 
-  const num1 = rndInRange(1, multiRnd);
+  const num1 = getRandomInRange(1, max);
 
-  const num2 = rndInRange(1, multiRnd);
+  const num2 = getRandomInRange(1, max);
 
   let answer = '';
 

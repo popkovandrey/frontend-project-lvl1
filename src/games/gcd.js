@@ -1,5 +1,5 @@
 import { cons } from '@hexlet/pairs';
-import rndInRange from '..';
+import getRandomInRange from '..';
 import gameEngine from '../engine';
 
 // вычисление НОД
@@ -17,9 +17,9 @@ const calcGCD = (num1, num2) => {
 
 // игра "Нахождение Общего Делителя"
 const generateAnswerQuestion = () => {
-  const num1 = rndInRange(1, 100);
+  const num1 = getRandomInRange(1, 100);
 
-  const num2 = rndInRange(1, 100);
+  const num2 = getRandomInRange(1, 100);
 
   const answer = String(calcGCD(num1, num2));
 

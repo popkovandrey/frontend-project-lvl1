@@ -1,9 +1,11 @@
 import { car, cdr } from '@hexlet/pairs';
 import readlineSync from 'readline-sync';
 
+const questionsCount = 3;
+
 // движок - обертка для игр. Игра - функция, возвращающая пару строк.
 // 1 - строка вопроса, 2 - строка ответа
-export default (funcGame, conditionGame) => {
+export default (generateAnswerQuestion, conditionGame) => {
   console.log();
 
   console.log('Welcome to the Brain Games!');
@@ -16,16 +18,14 @@ export default (funcGame, conditionGame) => {
 
   console.log(`Hello, ${userName}`);
 
-  const countQuestion = 3;
+  for (let i = 0; i < questionsCount; i += 1) {
+    const result = generateAnswerQuestion();
 
-  for (let i = 0; i < countQuestion; i += 1) {
-    const res = funcGame();
-
-    console.log(`Question: ${car(res)}`);
+    console.log(`Question: ${car(result)}`);
 
     const userAnswer = readlineSync.question('Your answer: ');
 
-    const correctAnswer = cdr(res);
+    const correctAnswer = cdr(result);
 
     if (userAnswer === correctAnswer) {
       console.log('Correct!');

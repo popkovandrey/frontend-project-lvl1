@@ -4,7 +4,11 @@ import gameEngine from '../engine';
 
 // проверка числа - простое/непростое
 const isPrime = (num) => {
-  for (let i = 2; i < num; i += 1) {
+  if (num < 2) {
+    return false;
+  }
+
+  for (let i = 2; i <= (num / 2); i += 1) {
     if (num % i === 0) {
       return false;
     }
@@ -15,11 +19,9 @@ const isPrime = (num) => {
 
 // игра "Простое ли число?".
 const generateAnswerQuestion = () => {
-  const num = getRandomInRange(2, 200);
+  const question = getRandomInRange(2, 200);
 
-  const question = num;
-
-  const answer = isPrime(num) ? 'yes' : 'no';
+  const answer = isPrime(question) ? 'yes' : 'no';
 
   return cons(question, answer);
 };

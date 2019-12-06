@@ -12,19 +12,19 @@ const generateAnswerQuestion = () => {
   // шаг
   const stepProgression = getRandomInRange(2, lengthProgression);
   // номер скрываемого элемента
-  const hideMemberProgression = getRandomInRange(0, lengthProgression - 1);
+  const hiddenElementPosition = getRandomInRange(0, lengthProgression - 1);
 
   let question = '';
 
   for (let i = 0; i < lengthProgression; i += 1) {
-    if (hideMemberProgression === i) {
-      question = `${question} ..`;
+    if (hiddenElementPosition === i) {
+      question = `${question}.. `;
     } else {
-      question = `${question} ${startProgression + stepProgression * i}`;
+      question = `${question}${startProgression + stepProgression * i} `;
     }
   }
 
-  const answer = String(startProgression + stepProgression * hideMemberProgression);
+  const answer = String(startProgression + stepProgression * hiddenElementPosition);
 
   return cons(question, answer);
 };

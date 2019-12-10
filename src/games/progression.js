@@ -7,9 +7,9 @@ const lengthProgression = 10;
 // игра "Арифметическая прогрессия".
 const generateAnswerQuestion = () => {
   const firstElementProgression = getRandomInRange(1, 100);
-  
+
   const stepProgression = getRandomInRange(2, 20);
-  
+
   const hiddenElementPosition = getRandomInRange(0, lengthProgression - 1);
 
   let question = '';

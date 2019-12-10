@@ -4,7 +4,7 @@
 [![Issue Count](https://codeclimate.com/github/popkovandrey/frontend-project-lvl1/badges/issue_count.svg)](https://codeclimate.com/github/popkovandrey/frontend-project-lvl1)
 [![Build Status](https://travis-ci.org/popkovandrey/frontend-project-lvl1.svg?branch=master)](https://travis-ci.org/popkovandrey/frontend-project-lvl1)
 
-### Описание пакета
+## Описание пакета
 
 Проект "Игры разума". Содержит в себе набор мини-игр:
 * четное/нечетно - определить, является ли предложенное число четным;

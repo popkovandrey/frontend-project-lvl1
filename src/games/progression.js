@@ -2,29 +2,27 @@ import { cons } from '@hexlet/pairs';
 import getRandomInRange from '..';
 import gameEngine from '../engine';
 
-// длина прогрессии
 const lengthProgression = 10;
 
 // игра "Арифметическая прогрессия".
 const generateAnswerQuestion = () => {
-  // первый элемент
-  const startProgression = getRandomInRange(1, 100);
-  // шаг
-  const stepProgression = getRandomInRange(2, lengthProgression);
-  // номер скрываемого элемента
+  const firstElementProgression = getRandomInRange(1, 100);
+  
+  const stepProgression = getRandomInRange(2, 20);
+  
   const hiddenElementPosition = getRandomInRange(0, lengthProgression - 1);
 
   let question = '';
 
   for (let i = 0; i < lengthProgression; i += 1) {
     if (hiddenElementPosition === i) {
-      question = `${question}.. `;
+      question = `${question} ..`;
     } else {
-      question = `${question}${startProgression + stepProgression * i} `;
+      question = `${question} ${firstElementProgression + stepProgression * i}`;
     }
   }
 
-  const answer = String(startProgression + stepProgression * hiddenElementPosition);
+  const answer = String(firstElementProgression + stepProgression * hiddenElementPosition);
 
   return cons(question, answer);
 };

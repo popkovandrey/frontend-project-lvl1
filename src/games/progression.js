@@ -16,15 +16,15 @@ const generateAnswerQuestion = () => {
 
   for (let i = 0; i < lengthProgression; i += 1) {
     if (hiddenElementPosition === i) {
-      question = `${question} ..`;
+      question = `${question}.. `;
     } else {
-      question = `${question} ${firstElementProgression + stepProgression * i}`;
+      question = `${question}${firstElementProgression + stepProgression * i} `;
     }
   }
 
   const answer = String(firstElementProgression + stepProgression * hiddenElementPosition);
 
-  return cons(question, answer);
+  return cons(question.trimRight(), answer);
 };
 
 const conditionGame = 'Answer "yes" if the number is even, otherwise answer "no".';
